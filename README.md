@@ -91,6 +91,7 @@ Designed for 100% reliability in headless environments like cron or systemd.
 
 	[Service]
 	Type=oneshot
+	RemainAfterExit=no
 
 	# Run as your admin user, not root
 	User=youradminusername
@@ -98,6 +99,8 @@ Designed for 100% reliability in headless environments like cron or systemd.
 
 	WorkingDirectory=/absolute/path/to
 	ExecStart=/absolute/path/to/porkbun_dns_updater.sh
+	
+	ExecStartPost=/bin/true
 
 	# Optional: Silence systemd journal logs except on error
 	# View the script's logfile, porkbun_dns_updater.log, instead

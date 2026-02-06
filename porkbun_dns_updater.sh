@@ -70,7 +70,7 @@ RUN_LOG="$(mktemp "${LOG_FILE}.run.XXXXXX")"
     trap 'rm -f "$RUN_LOG"' EXIT
 
 # Metadata to placate the Porkbun and IP Fetcher APIs
-VERSION="1.1.4" # Current script revision
+VERSION="1.1.5" # Current script revision
 USER_AGENT="PorkbunDNSUpdater/${VERSION}"
 
 # Just in case Porkbun changes the base API URL again
